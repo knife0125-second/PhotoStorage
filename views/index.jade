@@ -1,5 +1,31 @@
-extends layout
+!!! 5
+html
+  head
+    meta(charset='utf-8')
+    title Photo Storage - use webIntents -
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/base.css')
+    script(src='/javascripts/library/jquery.js')
+    script(src='/javascripts/library/bootstrap.min.js')
+    script(src='/javascripts/app/Controller.js')
+    script(src='/javascripts/app/models/Pallet.js')
+    script(src='/javascripts/app/models/Storage.js')
+    script(src='/javascripts/app/models/Gallery.js')
+  body
+    .container
+      h1 Photo Storage
+      p chrome 23以上(canary版)でみてね. おすすめのintentは[pixlr Express launcher]
+      #pallet
+        .clearfix
+          #dropBox.pallet(style='float:left; margin: 5px;')
+            | Drag Image here
+          #mirrorBox.pallet(style='float:left; margin: 5px;')
+            | Result
+        p
+          button#editButton.btn.btn-large.btn-primary(type='button') Edit
+          &nbsp;
+          button#saveButton.btn.btn-large.btn-primary(type='button') Save
+      #gallery
+      button#clearButton.btn.btn-large.btn-primary(type='button') Clear ALL
 
-block content
-  h1= title
-  p Welcome to #{title}
